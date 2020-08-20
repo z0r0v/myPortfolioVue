@@ -1,9 +1,9 @@
 <template>
   <div class="logo-box">
-    <picture>
+    <picture v-lazy-container="{ selector: 'img' }">
       <source media="(max-width: 768px)" srcset="@/assets/ico/ubuntu.svg">
       <source srcset="@/assets/ico/ubuntu.svg">
-      <img src="@/assets/ico/ubuntu.svg" alt="Ubuntu-logo">
+      <img data-src="@/assets/ico/ubuntu.svg" alt="Ubuntu-logo">
     </picture>
     <div class="logo-box__text">
       <h1>{{alexName}}</h1>
@@ -23,10 +23,23 @@ export default {
 }
 </script>
 <style lang="scss">
+  @import '../_variables.scss';
 .logo-box {
     display: flex;
+    align-items: center;
     picture img {
-      width: 50px;
+      width: 30px;
+      margin-right: 7px;
+      @include mq($from: tablet){
+        width: 50px;
+         margin-right: 15px;
+      }
+    }
+    &__text {
+      h1,h2 {
+        font-size: 14px;
+        font-weight: bold;
+      }
     }
 }
 </style>

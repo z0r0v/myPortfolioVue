@@ -4,17 +4,27 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
-
-
-    
     <router-view/>
   </div>
 </template>
 
 <style lang="scss">
- @import 'defalut-css.scss';
+  @import "_variables.scss";
+  @import 'defalut-css.scss';
+ body {
+   margin: 5px 10px;
+   padding: 5px 10px;
+   @include mq($from: tablet){
+        margin: 20px 50px;
+        padding: 10px 20px;
+   }
+   
+ }
+ h1 ,h2, span, p {
+    font: normal small-caps 18px/18px Prompt, sans-serif;
+ }
 #app {
-
+  
 
 }
 
