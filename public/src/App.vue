@@ -11,16 +11,9 @@
 <style lang="scss">
   @import "_variables.scss";
   @import 'defalut-css.scss';
- body {
-   margin: 5px 10px;
-   padding: 5px 10px;
-   @include mq($from: tablet){
-        margin: 20px 50px;
-        padding: 10px 20px;
-   }
-   
- }
- h1 ,h2, span, p {
+
+
+ h1 ,h2, span, p, ul, li, a {
     font: normal small-caps 18px/18px Prompt, sans-serif;
  }
 #app {

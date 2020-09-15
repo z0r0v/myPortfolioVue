@@ -23,7 +23,7 @@ export default {
 }
 </script>
 <style lang="scss">
-  @import '../_variables.scss';
+  @import '../../variables';
 .logo-box {
     display: flex;
     align-items: center;
@@ -40,6 +40,13 @@ export default {
         font-size: 14px;
         font-weight: bold;
       }
+        h2 {
+            display: none;
+            @include mq($from: tablet) {
+                display: block;
+            }
+        }
+
     }
 }
 </style>

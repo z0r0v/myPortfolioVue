@@ -20,9 +20,13 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../_variables.scss";
+@import "../../variables";
 .contacts {
-  display: flex;
+display: none;
+    @include mq($from: tablet) {
+        display: flex;
+    }
+
   a {
     display: flex;
   }
